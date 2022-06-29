@@ -80,13 +80,58 @@
     console.log (!"hello"); // false (NOT)true
     console.log (!![]); // true !!(DOUBLE-BANG) gives you the opposite of the opposite, which is the original value. Helpful to figure out if something is truthy or falsey.
 
-// LOGICAL OPERATORS
+// LOGICAL OPERATORS - Updated to include lecture notes via https://github.com/FullstackAcademy/2206-FTB-PT-WEB-PT/blob/main/Week_04/Day_01/type_conversions.js
 
-    if (10 && 20) {
-        console.log ("both 10 and 20 are truthy") // both things are true
-    }
+if (10 && 20) {
+    console.log ("both 10 and 20 are truthy") // both things are true
+}
 
-    if (10 || 0) {
-        console.log ("only one needs to be truthy for me to show up") // 10 is truthy, so this logs.
-    }
+if (10 || 0) {
+    console.log ("only one needs to be truthy for me to show up") // 10 is truthy, so this logs.
+}
+
+// The logical operators &&, ||, and ! perform Boolean algebra 
+// The && operation returns the first falsy value or the last value if 
+// no falsy value is found.
+
+
+let t1 = true
+let t2 = true
+let f1 = false
+let f2 = false
+//          true && true <--t2
+console.log(t1 && t2);
+//          true && true <--t1
+console.log(t2 && t1);
+//         true && false <-- f1
+console.log(t1 && f1);
+//          false && true <-- f1
+console.log(f1 && t1);
+//         false && false <-- f1
+console.log(f1 && f2);
+//         false && false <-- f2
+console.log(f2 && f1);
+
+//                (0) + 2
+let_add_falsy = (0 && undefined) + 2
+//example that will make more sense later
+// isUserLoggedIn = true && <show their feed></show>
+//               (true && true) --> 1 + 2
+let_add_truthy = ("1.2" && true) + 2
+console.log(let_add_falsy);
+console.log(let_add_truthy);
+
+// true && false ---> false
+((1 && 2) && (false && false))
+
+// The || operator performs the Boolean OR operation on its two operands. 
+// If one or both operands is truthy, it returns a truthy value. 
+// If both operands are falsy, it returns a falsy value.
+
+// It starts by evaluating its first operand, the expression on its left. 
+// If the value of this first operand is truthy, it short-circuits and returns 
+// that truthy value without ever evaluating the expression on the right. 
+// If, on the other hand, the value of the first operand is falsy, 
+// then || evaluates its second operand and returns the value of that expression.
+// true || false --> true
 
