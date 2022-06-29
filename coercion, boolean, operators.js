@@ -80,6 +80,28 @@
     console.log (!"hello"); // false (NOT)true
     console.log (!![]); // true !!(DOUBLE-BANG) gives you the opposite of the opposite, which is the original value. Helpful to figure out if something is truthy or falsey.
 
+//what happens when we use a loose comparison?? well look at the table!
+//JAVASCRIPT TYPE CONVERSIONS
+//    Value             ||	   to String        ||	 to Number  ||	 to Boolean
+// undefined                    "undefined"         NaN             false
+// null                         "null"              0               false
+//true                          "true"              1              
+//false                         "false"             0
+//"" (empty string)                                 0               false
+//"1.2" (nonempty, numeric)                         1.2             true
+//"one" (nonempty, non-numeric)                     NaN             true
+//0                             "0"                                 false
+//-0                            "0"                                 false
+//1 (finite, non-zero)          "1"                                 true
+//Infinity                      "Infinity"                          true
+//-Infinity                     "-Infinity"                         true
+//NaN                           "NaN"                               false
+//{} (any object)               complicated         complicated     true
+//[] (empty array)              ""                  0               true
+//[9] (one numeric element)     "9"                 9               true
+//['a'] (any other array)       "a"                 NaN             true
+//function(){} (any function)   complicated         NaN             true
+
 // LOGICAL OPERATORS - Updated to include lecture notes via https://github.com/FullstackAcademy/2206-FTB-PT-WEB-PT/blob/main/Week_04/Day_01/type_conversions.js
 
 if (10 && 20) {
