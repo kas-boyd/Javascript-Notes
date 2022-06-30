@@ -1,4 +1,6 @@
-// ARRAYS https://youtu.be/VtvgGncj0Zg
+// ARRAYS 
+    // https://youtu.be/VtvgGncj0Zg
+    // https://youtu.be/nSrM5iAJnTg
 // An array is a list-like data structure in Javascript
 // arrays are helpful for very large values, or a lot of known values you're looking store. 
 
